@@ -444,7 +444,7 @@ nav ul li {
 }
 
 .cards-main img {
-  height: 219px;
+  max-height: 219px;
   width: 100%;
   object-fit: cover;
 }
@@ -1103,7 +1103,7 @@ input {
   margin-top: 2em;
   grid-auto-flow: column;
   overflow: hidden;
-  gap: 18px;
+  gap: 28px;
   grid-auto-columns: calc((100% / 3) - 12px);
 }
 
@@ -1116,7 +1116,7 @@ input {
   list-style: none;
   border: none;
   scroll-snap-align: start;
-  width: 100%;
+  width: 390px;
   border-radius: 15px;
   flex-shrink: 0;
 }
@@ -1469,7 +1469,7 @@ left: 0;
     width: fit-content;
     margin-left: 0;
     position: absolute;
-    top: -140%;
+    top: -100%;
     right: 0;
   }
 
@@ -1510,6 +1510,7 @@ left: 0;
 
   .sales-container {
     padding: 10px;
+    padding-bottom: 3em;
   }
 
   .img-carousel img {
@@ -1967,5 +1968,21 @@ left: 0;
   h5 {
     font-weight: 800;
   }
+}
+
+.review-card{
+  height: 40vh;
+}
+
+.reviews-cards-container {
+  height: 45vh;
+}
+
+.card-products {
+  width: 490px;
+}
+
+.card-products img {
+  max-height: 219px !important;
 }
 }
