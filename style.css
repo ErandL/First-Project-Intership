@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
 }
 
+
 body.no-scroll {
   overflow: hidden;
 }
@@ -42,6 +43,10 @@ header {
   z-index: 100;
 }
 
+.chainsaw img {
+  width: 100%;
+}
+
 .header-bobuble {
   position: absolute;
   width: 799px;
@@ -65,7 +70,7 @@ header {
 
 .title h1 {
   position: relative;
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
   z-index: 10;
 }
@@ -75,7 +80,7 @@ header {
   width: 70%;
   display: grid;
   grid-template-columns: 80% 20%;
-  gap: 20px;
+  gap: 100px;
 }
 
 .search-children {
@@ -116,7 +121,7 @@ header {
 
 .search-children input {
   position: relative;
-  padding: 5px;
+  padding: 10px;
   padding-left: 20px;
   width: 100%;
   margin-right: 5px;
@@ -126,13 +131,14 @@ header {
 
 .search-children input::placeholder {
   color: #40c8f4;
+  padding-left: 15px;
 }
 
 .search-children i {
   color: #40c8f4;
   position: absolute;
-  left: auto;
-  top: 10px;
+  left: 20px;
+  top: 15px;
   z-index: 10;
 }
 
@@ -193,25 +199,34 @@ nav.show {
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  gap: 15px;
-  padding: 0;
+  width: 70%;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 0;
   margin: 0;
 }
 
 nav ul li {
   cursor: pointer;
   z-index: 10;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-decoration-line: none;
+  }
+
 }
 
 .bubble {
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 40px;
+  height: 50px;
   position: relative;
   background: #6bd9fd;
+  cursor: pointer;
 }
 
 .clip-path-left-bubble {
@@ -240,7 +255,7 @@ nav ul li {
 
 .bubble p {
   z-index: 10;
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
 }
 
@@ -253,9 +268,10 @@ nav ul li {
 .sales-container {
   background: linear-gradient(35deg, #fcf2ec, #fff5ef);
   width: 100%;
-  padding: 20px;
+  padding: 3em;
   position: relative;
   z-index: 5;
+  overflow: hidden;
 }
 
 .shape1 {
@@ -293,7 +309,7 @@ nav ul li {
 }
 
 .img-carousel img {
-  width: 85%;
+  width: 75%;
   height: auto;
   object-fit: cover;
 }
@@ -345,6 +361,8 @@ nav ul li {
   margin: 0;
   padding: 0;
   color: #ff3da1;
+  padding-bottom: 1em;
+  font-weight: 800;
 }
 
 .cards-container {
@@ -391,7 +409,7 @@ nav ul li {
   border-radius: 5px;
 }
 
-#all-product-pink > * {
+#all-product-pink>* {
   background-color: #f466af;
 }
 
@@ -425,6 +443,7 @@ nav ul li {
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
   border-radius: 0px 0px 20% 0px;
 }
+
 .cards-main img {
   height: 219px;
   width: 100%;
@@ -434,6 +453,7 @@ nav ul li {
 .cards-main .card {
   width: 20%;
 }
+
 /* mini game */
 .mini-game {
   position: relative;
@@ -441,11 +461,9 @@ nav ul li {
   margin-top: 30px;
   min-height: 50vh;
   background: #b3f6ff;
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 5%,
-    rgba(0, 0, 0, 1) 95%
-  );
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 5%,
+      rgba(0, 0, 0, 1) 95%);
   border-radius: 20% 0px 20% 0px;
 }
 
@@ -479,6 +497,7 @@ nav ul li {
   0% {
     transform: translateX(10%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -556,6 +575,7 @@ nav ul li {
 .clip-path-btn:hover {
   animation: buzz-out 3s linear;
 }
+
 .path-btn-holder:hover {
   animation: buzz-out 3s linear;
 }
@@ -568,33 +588,41 @@ input {
   10% {
     transform: translateX(3px) rotate(2deg);
   }
+
   20% {
     transform: translateX(-3px) rotate(-2deg);
   }
+
   30% {
     transform: translateX(3px) rotate(2deg);
   }
+
   40% {
     transform: translateX(-3px) rotate(-2deg);
   }
+
   50% {
     transform: translateX(2px) rotate(1deg);
   }
+
   60% {
     transform: translateX(-2px) rotate(-1deg);
   }
+
   70% {
     transform: translateX(1px) rotate(0.5deg);
   }
+
   80% {
     transform: translateX(-1px) rotate(-0.5deg);
   }
+
   90% {
     transform: translateX(0px) rotate(0deg);
   }
 }
 
-.clip-path-btn > * {
+.clip-path-btn>* {
   background-color: #ff3da1;
   color: white;
 }
@@ -630,7 +658,7 @@ input {
   margin: 0 auto 0 0;
 }
 
-.second-mini .submit > * {
+.second-mini .submit>* {
   color: white;
 }
 
@@ -714,7 +742,7 @@ input {
   background-color: #40c8f4;
 }
 
-#latest-head > * {
+#latest-head>* {
   color: white;
   background-color: #b3f6ff;
 }
@@ -730,7 +758,7 @@ input {
   margin: auto 15px;
 }
 
-#latest-head-active > * {
+#latest-head-active>* {
   background-color: #40c8f4;
 }
 
@@ -847,6 +875,7 @@ input {
 #left {
   left: -10px;
 }
+
 #right {
   right: -10px;
 }
@@ -898,10 +927,12 @@ input {
 }
 
 @keyframes bob {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
@@ -934,6 +965,7 @@ input {
 #card-person-1 {
   margin-bottom: 20px;
   background-color: #4364ad;
+
   .review-clip,
   .review-clip-left,
   .review-clip-right {
@@ -944,6 +976,7 @@ input {
 #card-person-2 {
   background-color: #f466af;
   margin-top: 20px;
+
   .review-clip,
   .review-clip-left,
   .review-clip-right {
@@ -954,6 +987,7 @@ input {
 #card-person-3 {
   background-color: #40c8f4;
   margin-bottom: 20px;
+
   .review-clip,
   .review-clip-left,
   .review-clip-right {
@@ -964,6 +998,7 @@ input {
 #card-person-4 {
   margin-top: 20px;
   background-color: #f2785f;
+
   .review-clip,
   .review-clip-left,
   .review-clip-right {
@@ -974,24 +1009,31 @@ input {
 .review-item1 {
   animation-delay: calc(35s / 8 * (8 - 1) * -1);
 }
+
 .review-item2 {
   animation-delay: calc(35s / 8 * (8 - 2) * -1);
 }
+
 .review-item3 {
   animation-delay: calc(35s / 8 * (8 - 3) * -1);
 }
+
 .review-item4 {
   animation-delay: calc(35s / 8 * (8 - 4) * -1);
 }
+
 .review-item5 {
   animation-delay: calc(35s / 8 * (8 - 5) * -1);
 }
+
 .review-item6 {
   animation-delay: calc(35s / 8 * (8 - 6) * -1);
 }
+
 .review-item7 {
   animation-delay: calc(35s / 8 * (8 - 7) * -1);
 }
+
 .review-item8 {
   animation-delay: calc(35s / 8 * (8 - 8) * -1);
 }
@@ -1038,6 +1080,7 @@ input {
 #left-new {
   left: -10px;
 }
+
 #right-new {
   right: -10px;
 }
@@ -1137,10 +1180,12 @@ input {
   flex: 35%;
   height: fit-content;
   overflow: hidden;
+
   h1 {
     font-weight: 900;
     color: white;
   }
+
   p {
     color: white;
   }
@@ -1163,27 +1208,31 @@ input {
   position: relative;
   margin-bottom: 1em;
   cursor: pointer;
+
   .clip-path-left {
     height: 100%;
     top: 0;
     left: 0;
   }
+
   .clip-path-right {
     height: 100%;
     top: 0;
   }
 }
 
-.blog-btn-clip > * {
+.blog-btn-clip>* {
   background-color: #f9b2d7;
 }
 
 .blog-btn-clip:hover {
   background-color: white;
+
   a {
     color: #ec007a;
     background-color: white;
   }
+
   .clip-path-right,
   .clip-path-left {
     background-color: white;
@@ -1231,17 +1280,19 @@ input {
   flex-direction: column;
   gap: 10px;
   padding: 1em;
+
   a {
     text-decoration: none;
     width: fit-content;
     font-weight: 800;
   }
+
   h5 {
     font-weight: 800;
   }
 }
 
-.person-review > * {
+.person-review>* {
   color: white;
 }
 
@@ -1261,13 +1312,14 @@ footer {
 
 .small-desc {
   width: 400px;
+
   a {
     text-decoration: none;
     color: white;
   }
 }
 
-.small-desc > * {
+.small-desc>* {
   color: white;
 }
 
@@ -1314,7 +1366,8 @@ footer {
 #sub-path-btn-holder {
   background-color: #ff3da1;
 }
-#sub-path-btn-holder > * {
+
+#sub-path-btn-holder>* {
   background-color: #ff3da1;
 }
 
@@ -1325,6 +1378,7 @@ footer {
   display: flex;
   justify-content: space-between;
   color: white;
+
   a {
     text-decoration: none;
     color: white;
@@ -1332,6 +1386,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
   h6,
   h5,
   h4 {
@@ -1435,7 +1490,7 @@ footer {
   }
 
   #nav-bubble,
-  #nav-bubble > * {
+  #nav-bubble>* {
     background-color: inherit;
     padding-top: 5px;
   }
@@ -1583,6 +1638,7 @@ footer {
     margin: 1em auto;
     margin-top: 10em;
   }
+
   .submit {
     width: 90% !important;
     padding-top: 30px;
@@ -1685,6 +1741,7 @@ footer {
   }
 
   .products-carousel {
+
     .card-products-new-price,
     .card-products-old-price {
       display: none;
@@ -1728,6 +1785,7 @@ footer {
     h5 {
       font-size: 14px;
     }
+
     p,
     a {
       font-size: 12px;
@@ -1738,6 +1796,7 @@ footer {
     flex: 100%;
     height: fit-content;
     overflow: hidden;
+
     p {
       color: white;
     }
@@ -1759,27 +1818,31 @@ footer {
     position: relative;
     margin-bottom: 1em;
     cursor: pointer;
+
     .clip-path-left {
       height: 100%;
       top: 0;
       left: 0;
     }
+
     .clip-path-right {
       height: 100%;
       top: 0;
     }
   }
 
-  .blog-btn-clip > * {
+  .blog-btn-clip>* {
     background-color: #f9b2d7;
   }
 
   .blog-btn-clip:hover {
     background-color: white;
+
     a {
       color: #ec007a;
       background-color: white;
     }
+
     .clip-path-right,
     .clip-path-left {
       background-color: white;
