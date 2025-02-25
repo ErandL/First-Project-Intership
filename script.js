@@ -95,50 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Carousel Fearured Games
-const carousel = document.querySelector(".feat-carousel");
-const cards = document.querySelectorAll(".card-feat");
-const leftArrow = document.getElementById("left");
-const rightArrow = document.getElementById("right");
-
-let currentIndex = 3;
-
-function updateActiveCard() {
-  cards.forEach((card, index) => {
-    if (index !== 0) {
-      card.classList.toggle("active", index === currentIndex);
-    } else {
-      card.classList.remove("active");
-    }
-  });
-
-  if (currentIndex !== 0) {
-    carousel.scrollTo({
-      left:
-        cards[currentIndex].offsetLeft -
-        carousel.offsetWidth / 2 +
-        cards[currentIndex].offsetWidth / 2,
-      behavior: "smooth",
-    });
-  }
-}
-
-leftArrow.addEventListener("click", () => {
-  do {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-  } while (currentIndex === 0);
-  updateActiveCard();
-});
-
-rightArrow.addEventListener("click", () => {
-  do {
-    currentIndex = (currentIndex + 1) % cards.length;
-  } while (currentIndex === 0);
-  updateActiveCard();
-});
-
-updateActiveCard();
-
 // New Products Carousel
 const carouselNew = document.querySelector(".products-carousel");
 const arrowBtns = document.querySelectorAll(".product-wrapper i");

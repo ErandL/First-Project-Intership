@@ -122,7 +122,7 @@ header {
 .search-children input {
   position: relative;
   padding: 10px;
-  padding-left: 20px;
+  padding-left: 40px;
   width: 100%;
   margin-right: 5px;
   border: 1px solid white;
@@ -131,13 +131,12 @@ header {
 
 .search-children input::placeholder {
   color: #40c8f4;
-  padding-left: 15px;
 }
 
 .search-children i {
   color: #40c8f4;
   position: absolute;
-  left: 20px;
+  left: 25px;
   top: 15px;
   z-index: 10;
 }
@@ -489,13 +488,14 @@ nav ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 35px;
   white-space: nowrap;
   animation: animate var(--t) linear infinite;
 }
 
 @keyframes animate {
   0% {
-    transform: translateX(10%);
+    transform: translateX(0%);
   }
 
   100% {
@@ -504,30 +504,34 @@ nav ul li {
 }
 
 .banner-content .square {
-  width: 30px;
-  height: 30px;
-  margin-left: 60px;
-  border: 1px solid white;
-  border-radius: 8px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-image: url('./img/square-banner.png');
   rotate: 173deg;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  height: 40px;
+}
+
+.span-img{
+  background: url('./img/Play\ for\ free\ Banner.png') no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 400px;
+  rotate: 1deg;
 }
 
 .banner-content span {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-weight: bold;
   font-size: 38px;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 2px white;
   padding-right: 20px;
 }
 
 .mini-game .contents {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 60% 25%;
   justify-items: center;
   padding: 160px 0 60px 0;
 }
@@ -558,12 +562,30 @@ nav ul li {
   justify-content: center;
   align-items: center;
   text-align: center;
+  p{
+    color: #656565;
+  }
+  h5{
+    color: #656565;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  h2{
+    font-weight: 800;
+  }
+}
+
+.contents-des .play-now,
+.contents-des .clip-path-btn {
+  width: 351px;
+
 }
 
 .play-now {
   padding: 11px 40px;
   border: none;
   width: 100%;
+  padding: 15px 0;
 }
 
 .clip-path-btn {
@@ -665,7 +687,7 @@ input {
 .second-mini .submit .submit-form input {
   width: 100%;
   border: none;
-  padding: 8px 30px;
+  padding: 12px 0px 12px 40px;
 }
 
 .second-mini .submit .submit-form input::placeholder {
@@ -678,7 +700,8 @@ input {
 
 .enter-email i {
   position: absolute;
-  top: 12px;
+  top: 17px;
+  left: 6px;
   color: #ff3da1;
 }
 
@@ -779,7 +802,7 @@ input {
 }
 
 .contents-second-des {
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -795,7 +818,8 @@ input {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 10em;
+  padding-bottom: 6em;
+  overflow: hidden;
 }
 
 .featured-games h2 {
@@ -804,80 +828,45 @@ input {
   margin-bottom: 1em;
 }
 
-.wrapper .feat-carousel {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  scroll-behavior: smooth;
+.glide{
+  width: 100%;
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+
+.glide__slides{
   list-style: none;
+  text-align: center;
 }
 
-.feat-carousel-body {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 35px;
-  width: 100%;
+.glide__track,
+.glide__slides{
+  overflow: visible !important;
 }
 
-.card-feat {
-  min-width: 300px !important;
-  height: fit-content;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-#dummy-card {
-  display: hidden !important;
-}
-
-.card-feat.active {
-  transform: scale(1.2);
-  margin: 0 2em;
-}
-
-.card-feat .img img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.wrapper,
-.product-wrapper {
-  width: 100%;
+.btn-controls{
   position: relative;
 }
 
-.wrapper i,
-.product-wrapper i {
-  padding: 2px;
+.btn-controls button{
   position: absolute;
-  top: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ff3da1;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: -180px;
+  background-color: transparent !important;
+  border: none !important;
 }
 
-#left {
-  left: -10px;
+.btn-controls button:last-child{
+  right: 30px;
 }
 
-#right {
-  right: -10px;
+.btn-controls button:first-child{
+  left: 30px;
+}
+
+.glide__slide--active {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2) !important; 
+  z-index: 2; 
 }
 
 .feat-background {
@@ -888,8 +877,9 @@ input {
   border-radius: 100px 0 100px 0;
   position: absolute;
   left: 0;
-  top: 70%;
+  top: 50%;
   z-index: -10;
+  margin-bottom: 9em;
 }
 
 /* Reviews section */
@@ -902,6 +892,7 @@ input {
 
 .reviews h2 {
   color: #ec007a;
+  font-weight: 800;
 }
 
 .reviews-cards-container {
@@ -1067,6 +1058,7 @@ input {
 /* New Products */
 .new-products h2 {
   color: #40c8f4;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
@@ -1075,6 +1067,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5em;
 }
 
 #left-new {
@@ -1177,7 +1170,7 @@ input {
 }
 
 .blogs-container {
-  flex: 35%;
+  flex: 30%;
   height: fit-content;
   overflow: hidden;
 
@@ -1252,7 +1245,7 @@ input {
   gap: 10px;
   padding-right: 15px;
   overflow-y: auto;
-  overflow-x: none;
+  overflow-x: hidden;
   scrollbar-width: none;
 }
 
@@ -1300,14 +1293,26 @@ footer {
   display: flex;
   flex-direction: column;
   background: linear-gradient(35deg, #04abe1, #42ccf6);
-  padding: 3em 0;
+  padding: 3em 4.5em 0 4.5em;
+  margin-top: 6em !important;
+  position: relative;
+}
+
+.chainsaw-footer{
+position: absolute;
+top: -16px;
+left: 0;
+ width: 100vw !important;
+ rotate: 0.4deg;
+}
+
+.chainsaw-footer img{
+  width: 100%;
 }
 
 .footer-info {
   display: flex;
   justify-content: space-around;
-  /* background: linear-gradient(35deg, #04abe1, #42ccf6);
-  padding: 3em 0; */
 }
 
 .small-desc {
@@ -1323,13 +1328,9 @@ footer {
   color: white;
 }
 
-.socials {
-  display: flex;
-  gap: 20px;
-}
-
 .socials i {
-  font-size: 27px;
+  font-size: 25px;
+  padding-right: 10px;
 }
 
 .links {
@@ -1350,13 +1351,13 @@ footer {
 }
 
 .subscribe i {
-  left: 1px;
+  left: 8px;
 }
 
 #sub-input {
   width: 100%;
   border: none;
-  padding: 8px 30px;
+  padding: 12px 0px 12px 40px;
 }
 
 #sub-input::placeholder {
@@ -1372,7 +1373,7 @@ footer {
 }
 
 .footer-copyright {
-  margin: 2em 2em 0 2em;
+  margin: 2em 5em 0 5em;
   padding-top: 1.5em;
   border-top: 1px solid white;
   display: flex;
@@ -1554,7 +1555,7 @@ footer {
   .cards-header ul li {
     background-color: rgb(254, 198, 208);
     padding: 10px 20px;
-    color: black;
+    color: #656565 !important;    
     margin-left: 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -1886,4 +1887,85 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media screen and (min-width: 1800px){
+  .second-mini {
+    height: 35vh;
+}
+
+.img-second-mini img {
+  height: 420px;
+  right: -3.3em;
+  bottom: -335px;
+  rotate: 0deg;
+}
+
+.second-mini .submit {
+  width: 30vw;
+  margin: 0 auto 0 0;
+  padding-top: 20px;
+}
+
+.cards-header ul li {
+  padding: 15px 45px;
+}
+
+.latest-news {
+  width: 100%;
+  height: 70vh;
+}
+
+.blogs-container {
+  flex: 25%;
+  margin-right: 3em;
+}
+
+.latest-news-reviews-container {
+  flex: 60%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.latest-news-reviews {
+  padding-left: 1em;
+  margin-left: 1em;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  background: linear-gradient(35deg, #40c8f4, #04abe1);
+  border-radius: 15px;
+}
+
+.latest-news-reviews img {
+  width: 100%;
+  border-radius: 15px;
+  height: 90%;
+}
+
+.person-review {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    width: fit-content;
+    font-weight: 800;
+  }
+
+  h5 {
+    font-weight: 800;
+  }
+}
 }
