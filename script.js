@@ -47,6 +47,26 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage();
   }
 
+  function updateImage() {
+    imgElement.src = images[currentIndex];
+
+    if (currentIndex === 0) {
+      leftArrow.src = "./img/sales-btn-left-disabled.png";
+      leftArrow.classList.add("disabled");
+    } else {
+      leftArrow.src = "./img/sales-btn-left.png";
+      leftArrow.classList.remove("disabled");
+    }
+
+    if (currentIndex === images.length - 1) {
+      rightArrow.src = "./img/sales-btn-right-disabled.png";
+      rightArrow.classList.add("disabled");
+    } else {
+      rightArrow.src = "./img/sales-btn-right.png";
+      rightArrow.classList.remove("disabled");
+    }
+  }
+
   rightArrow.addEventListener("click", function () {
     if (currentIndex < images.length - 1) {
       currentIndex++;
